@@ -16,4 +16,16 @@ loop:
 	add $t0,$t0,$v0
 	addi $v0,$v0,-1
 	benz $v0,loop
-	
+	li $v0,4
+	la $a,result
+	syscall
+	li $v0,1
+	move $a0,$t0
+	syscall
+	b main
+end:
+	li $v0,4
+	la $a0,bye
+	syscall
+	li $v0,10
+	syscall
