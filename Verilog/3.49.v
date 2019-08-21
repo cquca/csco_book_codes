@@ -1,0 +1,6 @@
+`define WORD 16
+...
+wire[1:`word] bus;
+...
+`undef WORD
+reg [0:`WORD-1] cev;
